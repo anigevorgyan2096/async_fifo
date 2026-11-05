@@ -1,0 +1,8 @@
+read_verilog async_fifo.v dp_ram.v reset_sync.v rptr_empty.v sync_2ff.v wptr_full.v
+synth -top async_fifo -flatten
+dfflibmap -liberty /Users/anigevorgyan/asic-learning/fsm_traffic/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use *lpflow*
+abc -liberty /Users/anigevorgyan/asic-learning/fsm_traffic/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use *lpflow* -dont_use *probe* -dont_use *clkdlybuf*
+hilomap -singleton -hicell sky130_fd_sc_hd__conb_1 HI -locell sky130_fd_sc_hd__conb_1 LO
+opt_clean -purge
+write_verilog -noattr -noexpr async_fifo_sky130.v
+stat

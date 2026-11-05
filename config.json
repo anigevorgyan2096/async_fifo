@@ -1,0 +1,26 @@
+{
+    "DESIGN_NAME": "async_fifo",
+    "VERILOG_FILES": [
+        "dir::src/async_fifo.v",
+        "dir::src/wptr_full.v",
+        "dir::src/rptr_empty.v",
+        "dir::src/dp_ram.v",
+        "dir::src/sync_2ff.v",
+        "dir::src/reset_sync.v"
+    ],
+    
+    "CLOCK_PORT": "wclk",
+    "CLOCK_NET": "wclk",
+    "CLOCK_PERIOD": 10.0,
+    
+    "FP_CORE_UTIL": 40,
+    "PL_TARGET_DENSITY": 0.55,
+    
+    "RUN_CVC": 1,
+    "FP_SIZING": "relative",
+    "DIE_AREA": [0, 0, 150, 150],
+    
+    "VDD_NETS": ["vccd1"],
+    "GND_NETS": ["vssd1"],
+    "SDC_FILE": "dir::src/async_fifo.sdc"
+}

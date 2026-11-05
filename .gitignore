@@ -1,0 +1,7 @@
+.venv/
+*.odb
+*.vcd
+*.log
+*.vvp
+rtl_sim
+gl_sim
