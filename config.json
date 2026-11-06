@@ -1,13 +1,13 @@
 {
     "DESIGN_NAME": "async_fifo",
     "VERILOG_FILES": [
-        "dir::src/async_fifo.v",
-        "dir::src/wptr_full.v",
-        "dir::src/rptr_empty.v",
-        "dir::src/dp_ram.v",
-        "dir::src/sync_2ff.v",
-        "dir::src/reset_sync.v"
-    ],
+    "dir::async_fifo.v",
+    "dir::wptr_full.v",
+    "dir::rptr_empty.v",
+    "dir::dp_ram.v",
+    "dir::sync_2ff.v",
+    "dir::reset_sync.v"
+],
     
     "CLOCK_PORT": "wclk",
     "CLOCK_NET": "wclk",
